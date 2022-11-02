@@ -17,6 +17,27 @@
     <!-- custom CSS here -->
     <link href="asset/css/style.css" rel="stylesheet" />
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	
+<!-- CDP Web Insight script -->
+<script type = "text/javascript" >
+   var _portalId = "33167"; // Portal ANTSOMI Shopping 2 
+   var _propId = "556301397"; // https://google.com.vn4 
+(function() {
+    var w = window;
+    if (w.web_event) return;
+    var a = window.web_event = function() {
+        a.queue.push(arguments);
+    }
+    a.propId = _propId;
+    a.track = a;
+    a.queue = [];
+    var e = document.createElement("script");
+    e.type = "text/javascript", e.async = !0, e.src = "//sandbox-st-a.cdp.asia/insight.js";
+    var t = document.getElementsByTagName("script")[0];
+    t.parentNode.insertBefore(e, t)
+})(); </script>
+<!-- End of CDP Web Insight script -->
+	
 <script>
   window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
@@ -29,6 +50,7 @@
     });
   });
 </script>
+	var _ATM_TRACKING_ASSOCIATE_UTM=1
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -581,5 +603,24 @@
 
         });
 		</script>
+	
+<script>		
+	    window.web_event.track("product", "add_to_cart", {
+		items: [{
+			"type": "product",
+			"id": "10042933",
+			"name": "Máy giặt Electrolux Inverter 9 kg EWF9024ADSA",
+			"sku": "",
+			"brand": "Samsung",
+			"main_category": "Điện lạnh",
+			"category_level_1": "",
+			"category_level_2": "",
+			"price": 12190000,
+			"quantity": 1,
+			"image_url": "",
+			"page_url": ""
+		}]
+	    });
+	</script> 	
 </body>
 </html>
